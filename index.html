@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        .preloader {
+            width: 100px;
+            height: 50px;
+            display: flex;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+        .rounded-red {
+            position: relative;
+            background-color: rgb(255,49,125);
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            animation: red-move 0.5s infinite;
+            box-shadow: 0px 0px 20px rgb(255,49,125);
+        }
+        .rounded-aqua {
+            position: relative;
+            background-color: rgb(41,235,255);
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            animation: aqua-move 0.5s infinite;
+            box-shadow: 0px 0px 20px rgb(41,235,255);
+        }
+        @keyframes red-move {
+            from {
+                left: 0;
+                transform: scale(0.7);
+                z-index: 0;
+            }
+            to {
+                left: 50px;
+                z-index: 99;
+            }
+        }
+        @keyframes aqua-move {
+            from {
+                right: 0;
+                transform: scale(0.7);
+            }
+            to {
+                right: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="preloader">
+        <div class="rounded-red"></div>
+        <div class="rounded-aqua"></div>
+    </div>
+</body>
+</html>
